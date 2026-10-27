@@ -1,0 +1,55 @@
+name: atlas_workspace
+description: Atlas — Professional AI Agent Flutter Monorepo (com.atlas.chat).
+publish_to: none
+repository: https://github.com/Liv-Coder/atlas
+version: 1.0.0
+
+environment:
+  sdk: ^3.7.0
+  flutter: ">=3.29.0"
+
+workspace:
+  - apps/atlas
+  - packages/core
+  - packages/design_system
+  - packages/logger
+  - packages/routing
+  - packages/storage
+
+dev_dependencies:
+  melos: ^7.0.0
+  flutter_lints: ^5.0.0
+
+melos:
+  scripts:
+    analyze:
+      run: melos exec -- flutter analyze
+      description: Run static analysis across all packages and apps.
+
+    format:
+      run: melos exec -- dart format --set-exit-if-changed .
+      description: Verify formatting across all packages.
+
+    test:
+      run: melos exec --dir-exists=test -- flutter test
+      description: Run tests in all packages that have a test directory.
+
+    test:coverage:
+      run: melos exec --dir-exists=test -- flutter test --coverage
+      description: Run tests with coverage across the monorepo.
+
+    fix:
+      run: melos exec -- dart fix --apply
+      description: Apply automated lint fixes across all packages.
+
+    pub:get:
+      run: melos bootstrap
+      description: Resolve all workspace dependencies and link local packages.
+
+  command:
+    bootstrap:
+      usePubspecOverrides: true
+
+    version:
+      branch: main
+      linkToCommits: true

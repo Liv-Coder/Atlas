@@ -1,0 +1,14 @@
+# Flutter / Dart / Melos
+.dart_tool/
+.packages
+build/
+pubspec.lock
+pubspec_overrides.yaml
+coverage/
+*.iml
+*.ipr
+*.iws
+.idea/
+.vscode/
+.DS_Store
+melos_atlas_workspace.iml

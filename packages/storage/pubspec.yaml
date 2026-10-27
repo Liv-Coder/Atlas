@@ -1,0 +1,25 @@
+name: storage
+description: Offline-first Hive CE local storage service for Atlas sessions and settings.
+version: 1.0.0
+publish_to: none
+resolution: workspace
+
+environment:
+  sdk: ^3.7.0
+  flutter: ">=3.29.0"
+
+dependencies:
+  core:
+    path: ../core
+  flutter:
+    sdk: flutter
+  hive_ce: ^2.10.1
+  hive_ce_flutter: ^2.2.0
+  logger:
+    path: ../logger
+  path_provider: ^2.1.5
+
+dev_dependencies:
+  flutter_lints: ^5.0.0
+  flutter_test:
+    sdk: flutter
