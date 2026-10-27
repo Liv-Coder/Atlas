@@ -382,8 +382,9 @@ class _ChatScreenState extends State<ChatScreen> {
         children: [
           MarkdownBody(
             data: m.content,
-            styleSheet: MarkdownStyleSheet(
+            styleSheet: MarkdownStyleSheet.fromTheme(Theme.of(context)).copyWith(
               p: TextStyle(
+                fontFamily: AtlasTypography.primaryFontFamily,
                 fontSize: 15,
                 height: 1.65,
                 color: colors.text,
@@ -430,8 +431,9 @@ class _ChatScreenState extends State<ChatScreen> {
                     Expanded(
                       child: MarkdownBody(
                         data: m.bulletItems[i],
-                        styleSheet: MarkdownStyleSheet(
+                        styleSheet: MarkdownStyleSheet.fromTheme(Theme.of(context)).copyWith(
                           p: TextStyle(
+                            fontFamily: AtlasTypography.primaryFontFamily,
                             fontSize: 15,
                             height: 1.6,
                             color: colors.text,
@@ -459,8 +461,9 @@ class _ChatScreenState extends State<ChatScreen> {
             const SizedBox(height: 10),
             MarkdownBody(
               data: m.footerNote!,
-              styleSheet: MarkdownStyleSheet(
+              styleSheet: MarkdownStyleSheet.fromTheme(Theme.of(context)).copyWith(
                 p: TextStyle(
+                  fontFamily: AtlasTypography.primaryFontFamily,
                   fontSize: 15,
                   height: 1.65,
                   color: colors.text,

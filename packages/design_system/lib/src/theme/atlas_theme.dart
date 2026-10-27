@@ -16,6 +16,7 @@ class AtlasTheme {
       scaffoldBackgroundColor: palette.bg,
       canvasColor: palette.bg2,
       dividerColor: palette.hair,
+      fontFamily: AtlasTypography.primaryFontFamily,
       textTheme: textTheme,
       colorScheme: ColorScheme(
         brightness: brightness,

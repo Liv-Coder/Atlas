@@ -5,8 +5,14 @@ import 'atlas_colors.dart';
 class AtlasTypography {
   const AtlasTypography._();
 
+  static String? get primaryFontFamily => GoogleFonts.manrope().fontFamily;
+  static String? get monoFontFamily => GoogleFonts.jetBrainsMono().fontFamily;
+
   static TextTheme buildTextTheme(AtlasColorPalette colors) {
-    final base = GoogleFonts.manropeTextTheme();
+    final base = GoogleFonts.manropeTextTheme().apply(
+      bodyColor: colors.text,
+      displayColor: colors.text,
+    );
     return base.copyWith(
       headlineMedium: GoogleFonts.manrope(
         fontSize: 28,
