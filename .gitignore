@@ -1,6 +1,8 @@
 # Flutter / Dart / Melos
 .dart_tool/
 .packages
+.flutter-plugins
+.flutter-plugins-dependencies
 build/
 pubspec.lock
 pubspec_overrides.yaml
@@ -12,3 +14,4 @@ coverage/
 .vscode/
 .DS_Store
 melos_atlas_workspace.iml
+**/local.properties
